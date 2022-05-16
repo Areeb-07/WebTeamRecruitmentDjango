@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style="color:blue;text-align:center;">ITSP 2022 Teams</h1>
+    <div class="list-group">
+        {% for team in teams %}
+            <a href="http://127.0.0.1:8000/{{ team.team_id }}" class="list-group-item list-group-item-action">{{ team.team_name }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}
